@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Pyscript Editor</title>
+    </head>
+    <body>
+        <textarea id="editor"></textarea>
+        <textarea id="output" readonly></textarea>
+        <button onclick="compile()">compile</button>
+        <script>
+            function compile() {
+                let code = document.getElementById('editor').value
+                let output = '<link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />' + '<script defer src="https://pyscript.net/alpha/pyscript.js"></script>' + '<py-script>' + code + '</py-script>'
+            }
+        </script>
+    </body>
+</html>
